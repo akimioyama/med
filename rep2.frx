@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/10/2022 12:05:03" ReportInfo.Modified="05/11/2022 14:11:36" ReportInfo.CreatorVersion="2022.2.3.0">
+  <Dictionary>
+    <TableDataSource Name="audit" ReferenceName="testDataSet1.audit" DataType="System.Int32" Enabled="true">
+      <Column Name="id" DataType="System.Int64"/>
+      <Column Name="table_name" DataType="System.String"/>
+      <Column Name="oper" DataType="System.String"/>
+      <Column Name="record_old" DataType="System.String"/>
+      <Column Name="record_new" DataType="System.String"/>
+      <Column Name="username" DataType="System.String"/>
+      <Column Name="date_ch" DataType="System.DateTime"/>
+    </TableDataSource>
+    <TableDataSource Name="Disease" ReferenceName="testDataSet1.Disease" DataType="System.Int32" Enabled="true">
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="symptoms" DataType="System.String"/>
+      <Column Name="medicines" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Disease-Patuents" ReferenceName="testDataSet1.Disease-Patuents" DataType="System.Int32" Enabled="true">
+      <Column Name="name" DataType="System.String"/>
+      <Column Name="data" DataType="System.DateTime"/>
+      <Column Name="id_insurance_policy" DataType="System.Int32"/>
+    </TableDataSource>
+    <TableDataSource Name="Doctors" ReferenceName="testDataSet1.Doctors" DataType="System.Int32" Enabled="true">
+      <Column Name="FIO" DataType="System.String"/>
+      <Column Name="id_med" DataType="System.Int32"/>
+      <Column Name="cabinet_number" DataType="System.Int32"/>
+      <Column Name="reception_days" DataType="System.String"/>
+      <Column Name="start_of_reception" DataType="System.TimeSpan"/>
+      <Column Name="end_of_reception" DataType="System.TimeSpan"/>
+      <Column Name="id_license" DataType="System.Int32"/>
+    </TableDataSource>
+    <TableDataSource Name="Patients" ReferenceName="testDataSet1.Patients" DataType="System.Int32" Enabled="true">
+      <Column Name="id_insurance_policy" DataType="System.Int32"/>
+      <Column Name="FIO" DataType="System.String"/>
+      <Column Name="adres" DataType="System.String"/>
+      <Column Name="insurance_comp_number" DataType="System.Int32"/>
+    </TableDataSource>
+    <TableDataSource Name="Patients-Doctors" ReferenceName="testDataSet1.Patients-Doctors" DataType="System.Int32" Enabled="true">
+      <Column Name="id_license" DataType="System.Int32"/>
+      <Column Name="id_insurance_policy" DataType="System.Int32"/>
+    </TableDataSource>
+    <TableDataSource Name="fioDoctor" ReferenceName="testDataSet1.fioDoctor" DataType="System.Int32" Enabled="true">
+      <Column Name="ФИО врача" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="infoAboutPatient" ReferenceName="testDataSet1.infoAboutPatient" DataType="System.Int32" Enabled="true">
+      <Column Name="Адрес" DataType="System.String"/>
+      <Column Name="Дата заболевания" DataType="System.DateTime"/>
+      <Column Name="Название болезни" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="infoDoctorMed" ReferenceName="testDataSet1.infoDoctorMed" DataType="System.Int32" Enabled="true">
+      <Column Name="Номер кабинета" DataType="System.Int32"/>
+      <Column Name="Дни приёма" DataType="System.String"/>
+      <Column Name="Начало приёма" DataType="System.TimeSpan"/>
+      <Column Name="Конец приёма" DataType="System.TimeSpan"/>
+    </TableDataSource>
+    <TableDataSource Name="infoPatients1" ReferenceName="testDataSet1.infoPatients1" DataType="System.Int32" Enabled="true">
+      <Column Name="ФИО Пациента" DataType="System.String"/>
+      <Column Name="Номер полиса" DataType="System.Int32"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text1" Left="18.9" Top="9.45" Width="661.5" Height="18.9" Text="Отчёт о списке больных по болезням&#13;&#10;" Font="Arial, 10pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41" Width="718.2" Height="28.35"/>
+    <GroupHeaderBand Name="GroupHeader1" Top="72.55" Width="718.2" Height="37.8" Condition="[Disease.name]">
+      <TextObject Name="Text2" Left="75.6" Top="9.45" Width="122.85" Height="18.9" Text="[Disease.name]" Font="Arial, 10pt"/>
+      <GroupHeaderBand Name="GroupHeader3" Top="113.55" Width="718.2" Height="37.8">
+        <DataBand Name="Data1" Top="154.55" Width="718.2" Height="37.8" DataSource="Disease"/>
+        <GroupFooterBand Name="GroupFooter3" Top="195.55" Width="718.2" Height="37.8"/>
+      </GroupHeaderBand>
+      <GroupFooterBand Name="GroupFooter1" Top="236.55" Width="718.2" Height="37.8"/>
+    </GroupHeaderBand>
+    <GroupHeaderBand Name="GroupHeader2" Top="277.55" Width="718.2" Height="37.8" Condition="[Patients.FIO]">
+      <TextObject Name="Text5" Left="75.6" Top="9.45" Width="94.5" Height="18.9" Text="[Patients.FIO]" Font="Arial, 10pt"/>
+      <DataBand Name="Data2" Top="318.55" Width="718.2" Height="37.8" DataSource="Patients"/>
+      <GroupFooterBand Name="GroupFooter2" Top="359.55" Width="718.2" Height="37.8"/>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Top="400.55" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>

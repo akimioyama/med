@@ -33,8 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FastReport, Version=2022.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="FastReport.Bars, Version=2022.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="FastReport.Compat, Version=2021.3.0.0, Culture=neutral, PublicKeyToken=406e1f4c3c8ef97e" />
+    <Reference Include="FastReport.DataVisualization, Version=2021.3.0.0, Culture=neutral, PublicKeyToken=5ceb240df42bf6e8" />
+    <Reference Include="FastReport.Editor, Version=2022.2.3.0, Culture=neutral, PublicKeyToken=db7e5ce63278458c" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +60,136 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addDoctorForm.Designer.cs">
+      <DependentUpon>addDoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addPatientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addPatientsForm.Designer.cs">
+      <DependentUpon>addPatientsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="appointDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="appointDoctorForm.Designer.cs">
+      <DependentUpon>appointDoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeDoctorFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeDoctorFrom.Designer.cs">
+      <DependentUpon>changeDoctorFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="deleteDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deleteDoctorForm.Designer.cs">
+      <DependentUpon>deleteDoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DiseaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiseaseForm.Designer.cs">
+      <DependentUpon>DiseaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorsForm.Designer.cs">
+      <DependentUpon>DoctorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fioDoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fioDoctorForm.Designer.cs">
+      <DependentUpon>fioDoctorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="infoAboutPatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="infoAboutPatientForm.Designer.cs">
+      <DependentUpon>infoAboutPatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="infoDoctorMedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="infoDoctorMedForm.Designer.cs">
+      <DependentUpon>infoDoctorMedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="infoPatients1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="infoPatients1Form.Designer.cs">
+      <DependentUpon>infoPatients1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsForm.Designer.cs">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spr2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="spr2.Designer.cs">
+      <DependentUpon>spr2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addDoctorForm.resx">
+      <DependentUpon>addDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addPatientsForm.resx">
+      <DependentUpon>addPatientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="appointDoctorForm.resx">
+      <DependentUpon>appointDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeDoctorFrom.resx">
+      <DependentUpon>changeDoctorFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deleteDoctorForm.resx">
+      <DependentUpon>deleteDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiseaseForm.resx">
+      <DependentUpon>DiseaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorsForm.resx">
+      <DependentUpon>DoctorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fioDoctorForm.resx">
+      <DependentUpon>fioDoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="infoAboutPatientForm.resx">
+      <DependentUpon>infoAboutPatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="infoDoctorMedForm.resx">
+      <DependentUpon>infoDoctorMedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="infoPatients1Form.resx">
+      <DependentUpon>infoPatients1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsForm.resx">
+      <DependentUpon>PatientsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +199,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="spr2.resx">
+      <DependentUpon>spr2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,6 +212,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="testDataSet.xsc">
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="testDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>testDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="testDataSet.xss">
+      <DependentUpon>testDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
