@@ -141,14 +141,14 @@
             // 
             this.колличествоБольныхToolStripMenuItem.Name = "колличествоБольныхToolStripMenuItem";
             this.колличествоБольныхToolStripMenuItem.Size = new System.Drawing.Size(327, 28);
-            this.колличествоБольныхToolStripMenuItem.Text = "Колличество больных";
+            this.колличествоБольныхToolStripMenuItem.Text = "Информация о пациентах";
             this.колличествоБольныхToolStripMenuItem.Click += new System.EventHandler(this.колличествоБольныхToolStripMenuItem_Click);
             // 
             // информацияОПациентахToolStripMenuItem
             // 
             this.информацияОПациентахToolStripMenuItem.Name = "информацияОПациентахToolStripMenuItem";
             this.информацияОПациентахToolStripMenuItem.Size = new System.Drawing.Size(327, 28);
-            this.информацияОПациентахToolStripMenuItem.Text = "Информация о пациентах";
+            this.информацияОПациентахToolStripMenuItem.Text = "Отчет о болезнях";
             this.информацияОПациентахToolStripMenuItem.Click += new System.EventHandler(this.информацияОПациентахToolStripMenuItem_Click);
             // 
             // справкиToolStripMenuItem
@@ -162,7 +162,7 @@
             // выпискаToolStripMenuItem
             // 
             this.выпискаToolStripMenuItem.Name = "выпискаToolStripMenuItem";
-            this.выпискаToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
+            this.выпискаToolStripMenuItem.Size = new System.Drawing.Size(171, 28);
             this.выпискаToolStripMenuItem.Text = "Выписка";
             this.выпискаToolStripMenuItem.Click += new System.EventHandler(this.выпискаToolStripMenuItem_Click);
             // 
@@ -180,28 +180,28 @@
             // добавитьВрачаToolStripMenuItem
             // 
             this.добавитьВрачаToolStripMenuItem.Name = "добавитьВрачаToolStripMenuItem";
-            this.добавитьВрачаToolStripMenuItem.Size = new System.Drawing.Size(341, 28);
+            this.добавитьВрачаToolStripMenuItem.Size = new System.Drawing.Size(330, 28);
             this.добавитьВрачаToolStripMenuItem.Text = "Добавить врача";
             this.добавитьВрачаToolStripMenuItem.Click += new System.EventHandler(this.добавитьВрачаToolStripMenuItem_Click);
             // 
             // удалитьВарчаToolStripMenuItem
             // 
             this.удалитьВарчаToolStripMenuItem.Name = "удалитьВарчаToolStripMenuItem";
-            this.удалитьВарчаToolStripMenuItem.Size = new System.Drawing.Size(341, 28);
+            this.удалитьВарчаToolStripMenuItem.Size = new System.Drawing.Size(330, 28);
             this.удалитьВарчаToolStripMenuItem.Text = "Удалить варча";
             this.удалитьВарчаToolStripMenuItem.Click += new System.EventHandler(this.удалитьВарчаToolStripMenuItem_Click);
             // 
             // добавитьПациентаToolStripMenuItem
             // 
             this.добавитьПациентаToolStripMenuItem.Name = "добавитьПациентаToolStripMenuItem";
-            this.добавитьПациентаToolStripMenuItem.Size = new System.Drawing.Size(341, 28);
+            this.добавитьПациентаToolStripMenuItem.Size = new System.Drawing.Size(330, 28);
             this.добавитьПациентаToolStripMenuItem.Text = "Добавить пациента";
             this.добавитьПациентаToolStripMenuItem.Click += new System.EventHandler(this.добавитьПациентаToolStripMenuItem_Click);
             // 
             // добавитьПациентуВрачаToolStripMenuItem
             // 
             this.добавитьПациентуВрачаToolStripMenuItem.Name = "добавитьПациентуВрачаToolStripMenuItem";
-            this.добавитьПациентуВрачаToolStripMenuItem.Size = new System.Drawing.Size(341, 28);
+            this.добавитьПациентуВрачаToolStripMenuItem.Size = new System.Drawing.Size(330, 28);
             this.добавитьПациентуВрачаToolStripMenuItem.Text = "Добавить пациенту врача";
             this.добавитьПациентуВрачаToolStripMenuItem.Click += new System.EventHandler(this.добавитьПациентуВрачаToolStripMenuItem_Click);
             // 
@@ -372,13 +372,13 @@
         private FastReport.Report report1;
         private System.Windows.Forms.ToolStripMenuItem колличествоБольныхToolStripMenuItem;
         private testDataSet testDataSet1;
-        private FastReport.Report report2;
         private System.Windows.Forms.ToolStripMenuItem информацияОПациентахToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выпискаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьВрачаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem удалитьВарчаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьПациентаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьПациентуВрачаToolStripMenuItem;
+        private FastReport.Report report2;
     }
 }
 

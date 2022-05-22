@@ -73,7 +73,7 @@ namespace med
 
         private void информацияОПациентахToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            report2.Show();
+            
         }
 
         private void выписатьПацентаToolStripMenuItem_Click(object sender, EventArgs e)
