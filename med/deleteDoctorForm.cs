@@ -57,7 +57,7 @@ namespace med
             {
                 label4.Text = result[0][6].ToString();
             }
-            catch (Exception ex)
+            catch 
             {
                 //MessageBox.Show(ex.Message);
             }

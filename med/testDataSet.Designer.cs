@@ -2014,7 +2014,7 @@ namespace med {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PatientsRow AddPatientsRow(int id_insurance_policy, string FIO, string adres, int insurance_comp_number) {
+            public PatientsRow AddPatientsRow(int id_insurance_policy, string FIO, string adres, string insurance_comp_number) {
                 PatientsRow rowPatientsRow = ((PatientsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id_insurance_policy,
@@ -2065,7 +2065,7 @@ namespace med {
                 base.Columns.Add(this.columnFIO);
                 this.columnadres = new global::System.Data.DataColumn("adres", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnadres);
-                this.columninsurance_comp_number = new global::System.Data.DataColumn("insurance_comp_number", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columninsurance_comp_number = new global::System.Data.DataColumn("insurance_comp_number", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columninsurance_comp_number);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid_insurance_policy}, true));
@@ -3994,9 +3994,9 @@ namespace med {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int insurance_comp_number {
+            public string insurance_comp_number {
                 get {
-                    return ((int)(this[this.tablePatients.insurance_comp_numberColumn]));
+                    return ((string)(this[this.tablePatients.insurance_comp_numberColumn]));
                 }
                 set {
                     this[this.tablePatients.insurance_comp_numberColumn] = value;

@@ -35,7 +35,7 @@ namespace med
             {
                 label5.Text = result[0][0].ToString();
             }
-            catch (Exception ex)
+            catch 
             {
                 //MessageBox.Show(ex.Message);
             }
@@ -49,7 +49,7 @@ namespace med
             {
                 label6.Text = result[0][6].ToString();
             }
-            catch (Exception ex)
+            catch 
             {
                 //MessageBox.Show(ex.Message);
             }

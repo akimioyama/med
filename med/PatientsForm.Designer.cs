@@ -31,18 +31,20 @@
             this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.testDataSet = new med.testDataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.patientsTableAdapter = new med.testDataSetTableAdapters.PatientsTableAdapter();
             this.idinsurancepolicyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.insurancecompnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.testDataSet = new med.testDataSet();
-            this.patientsTableAdapter = new med.testDataSetTableAdapters.PatientsTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
+            this.patientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -71,7 +73,7 @@
             this.fIODataGridViewTextBoxColumn,
             this.adresDataGridViewTextBoxColumn,
             this.insurancecompnumberDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.patientsBindingSource;
+            this.dataGridView1.DataSource = this.patientsBindingSource1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
@@ -80,6 +82,30 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1158, 604);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // patientsBindingSource
+            // 
+            this.patientsBindingSource.DataMember = "Patients";
+            this.patientsBindingSource.DataSource = this.testDataSet;
+            // 
+            // testDataSet
+            // 
+            this.testDataSet.DataSetName = "testDataSet";
+            this.testDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 613);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 45);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Выгрухить в EXCEL";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // patientsTableAdapter
+            // 
+            this.patientsTableAdapter.ClearBeforeFill = true;
             // 
             // idinsurancepolicyDataGridViewTextBoxColumn
             // 
@@ -111,35 +137,16 @@
             // insurancecompnumberDataGridViewTextBoxColumn
             // 
             this.insurancecompnumberDataGridViewTextBoxColumn.DataPropertyName = "insurance_comp_number";
-            this.insurancecompnumberDataGridViewTextBoxColumn.HeaderText = "Номер страховой компании";
+            this.insurancecompnumberDataGridViewTextBoxColumn.HeaderText = "Название страховой компании";
             this.insurancecompnumberDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.insurancecompnumberDataGridViewTextBoxColumn.Name = "insurancecompnumberDataGridViewTextBoxColumn";
             this.insurancecompnumberDataGridViewTextBoxColumn.ReadOnly = true;
             this.insurancecompnumberDataGridViewTextBoxColumn.Width = 125;
             // 
-            // patientsBindingSource
+            // patientsBindingSource1
             // 
-            this.patientsBindingSource.DataMember = "Patients";
-            this.patientsBindingSource.DataSource = this.testDataSet;
-            // 
-            // testDataSet
-            // 
-            this.testDataSet.DataSetName = "testDataSet";
-            this.testDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // patientsTableAdapter
-            // 
-            this.patientsTableAdapter.ClearBeforeFill = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 613);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.patientsBindingSource1.DataMember = "Patients";
+            this.patientsBindingSource1.DataSource = this.testDataSet;
             // 
             // PatientsForm
             // 
@@ -154,6 +161,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,10 +173,11 @@
         private testDataSet testDataSet;
         private System.Windows.Forms.BindingSource patientsBindingSource;
         private testDataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idinsurancepolicyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fIODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn insurancecompnumberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource patientsBindingSource1;
     }
 }

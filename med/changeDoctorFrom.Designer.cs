@@ -46,12 +46,21 @@
             this.sqlCommand1 = new System.Data.SqlClient.SqlCommand();
             this.doctorsTableAdapter = new med.testDataSetTableAdapters.DoctorsTableAdapter();
             this.patients_DoctorsTableAdapter = new med.testDataSetTableAdapters.Patients_DoctorsTableAdapter();
+            this.patientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.patientsTableAdapter = new med.testDataSetTableAdapters.PatientsTableAdapter();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsDoctorsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -69,6 +78,12 @@
             this.tableLayoutPanel1.Controls.Add(this.comboBox1, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.comboBox2, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.comboBox3, 1, 11);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 3, 9);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 3, 7);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 3, 11);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -97,9 +112,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(23, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 25);
+            this.label1.Size = new System.Drawing.Size(277, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Выбери нового врача:";
+            this.label1.Text = "Выбери предыдущего врача:";
             // 
             // label2
             // 
@@ -107,9 +122,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(23, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(267, 25);
+            this.label2.Size = new System.Drawing.Size(202, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Укажи предыдущего врача:";
+            this.label2.Text = "Укажи нового врача:";
             // 
             // label3
             // 
@@ -117,9 +132,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(23, 340);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(317, 25);
+            this.label3.Size = new System.Drawing.Size(204, 25);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Выбери номер полиса пациента:";
+            this.label3.Text = "Выберите пациента:";
             // 
             // button1
             // 
@@ -143,6 +158,7 @@
             this.comboBox1.Size = new System.Drawing.Size(438, 34);
             this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "id_license";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // doctorsBindingSource
             // 
@@ -170,6 +186,7 @@
             this.comboBox2.Size = new System.Drawing.Size(438, 34);
             this.comboBox2.TabIndex = 5;
             this.comboBox2.ValueMember = "id_license";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // doctorsBindingSource1
             // 
@@ -178,8 +195,8 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.DataSource = this.patientsDoctorsBindingSource;
-            this.comboBox3.DisplayMember = "id_insurance_policy";
+            this.comboBox3.DataSource = this.patientsBindingSource;
+            this.comboBox3.DisplayMember = "FIO";
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(23, 378);
@@ -187,6 +204,7 @@
             this.comboBox3.Size = new System.Drawing.Size(438, 34);
             this.comboBox3.TabIndex = 6;
             this.comboBox3.ValueMember = "id_insurance_policy";
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // patientsDoctorsBindingSource
             // 
@@ -217,6 +235,75 @@
             // 
             this.patients_DoctorsTableAdapter.ClearBeforeFill = true;
             // 
+            // patientsBindingSource
+            // 
+            this.patientsBindingSource.DataMember = "Patients";
+            this.patientsBindingSource.DataSource = this.testDataSet;
+            // 
+            // patientsTableAdapter
+            // 
+            this.patientsTableAdapter.ClearBeforeFill = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(487, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(219, 29);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Номер лицензии:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(487, 195);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(219, 29);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Номер лицензии:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(487, 340);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(186, 29);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Номер полиса:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(487, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 29);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "...";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(487, 230);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 29);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "...";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(487, 375);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 29);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "...";
+            // 
             // changeDoctorFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -233,6 +320,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.testDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doctorsBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientsDoctorsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,5 +344,13 @@
         private System.Windows.Forms.BindingSource patientsDoctorsBindingSource;
         private testDataSetTableAdapters.Patients_DoctorsTableAdapter patients_DoctorsTableAdapter;
         private System.Windows.Forms.BindingSource doctorsBindingSource1;
+        private System.Windows.Forms.BindingSource patientsBindingSource;
+        private testDataSetTableAdapters.PatientsTableAdapter patientsTableAdapter;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

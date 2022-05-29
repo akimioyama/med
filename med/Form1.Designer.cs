@@ -110,21 +110,21 @@
             // врачиToolStripMenuItem
             // 
             this.врачиToolStripMenuItem.Name = "врачиToolStripMenuItem";
-            this.врачиToolStripMenuItem.Size = new System.Drawing.Size(175, 28);
+            this.врачиToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.врачиToolStripMenuItem.Text = "Врачи";
             this.врачиToolStripMenuItem.Click += new System.EventHandler(this.врачиToolStripMenuItem_Click);
             // 
             // больныеToolStripMenuItem
             // 
             this.больныеToolStripMenuItem.Name = "больныеToolStripMenuItem";
-            this.больныеToolStripMenuItem.Size = new System.Drawing.Size(175, 28);
+            this.больныеToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.больныеToolStripMenuItem.Text = "Больные";
             this.больныеToolStripMenuItem.Click += new System.EventHandler(this.больныеToolStripMenuItem_Click);
             // 
             // болезниToolStripMenuItem
             // 
             this.болезниToolStripMenuItem.Name = "болезниToolStripMenuItem";
-            this.болезниToolStripMenuItem.Size = new System.Drawing.Size(175, 28);
+            this.болезниToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.болезниToolStripMenuItem.Text = "Болезни";
             this.болезниToolStripMenuItem.Click += new System.EventHandler(this.болезниToolStripMenuItem_Click);
             // 
@@ -162,7 +162,7 @@
             // выпискаToolStripMenuItem
             // 
             this.выпискаToolStripMenuItem.Name = "выпискаToolStripMenuItem";
-            this.выпискаToolStripMenuItem.Size = new System.Drawing.Size(171, 28);
+            this.выпискаToolStripMenuItem.Size = new System.Drawing.Size(224, 28);
             this.выпискаToolStripMenuItem.Text = "Выписка";
             this.выпискаToolStripMenuItem.Click += new System.EventHandler(this.выпискаToolStripMenuItem_Click);
             // 
@@ -334,10 +334,10 @@
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MinimumSize = new System.Drawing.Size(500, 500);
             this.Name = "mainForm";
-            this.Text = "Form1";
+            this.Text = "Работы над больными";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
